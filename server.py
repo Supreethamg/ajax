@@ -49,6 +49,7 @@ def weather():
     """Return the forecast and current temperature for a zipcode."""
 
     zipcode = request.args.get('zipcode')
+    print(zipcode)
     weather_info = WEATHER.get(zipcode, DEFAULT_WEATHER)
 
     return jsonify(weather_info)
